@@ -1,0 +1,37 @@
+
+  <div class="container">
+    <div class="row border">
+      <div class="col-12">
+        <div class="row bg-dark text-white p-3">
+            <div class="col-3 text-center">
+              ID
+            </div>
+            <div class="col-3 text-center">
+              Beer
+            </div>
+            <div class="col-2 text-center">
+              Price
+            </div>
+            <div class="col-4 text-center">
+              Actions
+            </div>
+        </div>
+          <div *ngFor="let beer of liste" class="row border-top py-2">
+            <div class="col-3 border-right">
+                {{ beer.key }}
+            </div> 
+            <div class="col-3 border-right">
+                {{ beer.values.name }}
+            </div> 
+            <div class="col-2 border-right">
+                {{ beer.values.price }} €
+            </div>
+            <div class="col-4">
+                <button class="btn btn-success btn-xs mr-4" [routerLink]="['/detail', beer.key]"> Detail</button>
+                <button class="btn btn-warning btn-xs mr-4" [routerLink]="['/edit', beer.key]"> Editer</button>
+              <button class="btn btn-danger btn-xs" (click)="deleteBeer(beer.key)"> Delete</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>

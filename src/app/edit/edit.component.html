@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1> Edit beer</h1>
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="row">
+            <div class="col-6">
+                <label for="name"> Name</label><br>
+                <input type="text" name="name" [ngModel]="beer?.name" required class="w-100"><br>
+            </div>
+            <div class="col-6">
+                <label for="price"> Price</label><br>
+                <input type="number" name="price" [ngModel]="beer?.price" ngModel required><br>
+            </div>
+            <div class="col-6">
+                <label for="degree"> Degree</label><br>
+                <input type="number" name="degree" [ngModel]="beer?.degree" ngModel required><br>
+            </div>
+            <div class="col-6">
+                <label for="image"> Image</label><br>
+                <input type="text" name="image" [ngModel]="beer?.image" ngModel required><br>
+            </div>
+            <div class="col-6">
+                <label for="date"> Date</label><br>
+              <input type="date" name="date" [ngModel]="beer?.date" ngModel required><br>
+            </div>
+            
+              <div class="col-12 mt-5">
+                  <button type="submit" class="btn btn-success">Edit</button>
+              </div>
+            </form>
+  
+      </div>
+    </div>
+  </div>
+  
+  
+  

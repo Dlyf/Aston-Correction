@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1> Add beer</h1>
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="row">
+          <div class="col-6">
+              <label for="name"> Name</label><br>
+              <input type="text" name="name" ngModel required class="w-100"><br>
+          </div>
+          <div class="col-6">
+              <label for="price"> Price</label><br>
+              <input type="number" name="price" ngModel required><br>
+          </div>
+          <div class="col-6">
+              <label for="degree"> Degree</label><br>
+              <input type="number" name="degree" ngModel required><br>
+          </div>
+          <div class="col-6">
+              <label for="image"> Image</label><br>
+              <input type="text" name="image" ngModel required><br>
+          </div>
+          <div class="col-6">
+              <label for="date"> Date</label><br>
+            <input type="date" name="date" ngModel required><br>
+          </div>
+          
+            <div class="col-12 mt-5">
+                <button type="submit" class="btn btn-success">Ajouter</button>
+            </div>
+          </form>
+
+    </div>
+  </div>
+</div>
+
+
